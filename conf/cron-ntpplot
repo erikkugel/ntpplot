@@ -1,1 +1,1 @@
-*/5 * * * * root /usr/bin/gnuplot /opt/ntpplot/bin/ntpplot.gpi
+*/5 * * * * /usr/bin/gnuplot /opt/ntpplot/bin/ntpplot.gpi
