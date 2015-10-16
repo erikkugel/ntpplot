@@ -6,9 +6,9 @@ ntpplot levrages the robust statistics repoting built into NTP to plot various
 graphhs regarding normal and abnormal operation.
 
 ### Who is this for?
-Anyone running a production NTP server, whether in an internal environment such
-as a datacenter or and office, or an external pulic facing environment such as
-contribution to pool.ntp.org, will benefit from a little transperency.
+Anyone running a production NTP server (whether in an internal environment such
+as a datacenter or an office, or an external pulic facing environment such as
+contribution to pool.ntp.org) will benefit from a little transperency.
 
 ### How does this work?
 The concept is simple and strives to levrage existing components:  
