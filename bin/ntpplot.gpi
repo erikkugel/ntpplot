@@ -21,7 +21,7 @@ set title 'NTP Packet Errors' textcolor rgbcolor 'red'
 set xlabel 'Seconds (past UTC midnight)'
 set ylabel 'Errors' textcolor rgbcolor 'red'
 plot '/var/log/ntp/sys' using 2:8 title 'Bad version' with lines,\
-     '/var/log/ntp/sys' using 2:10 title 'Access denied' with lines,\
-     '/var/log/ntp/sys' using 2:11 title 'Bad length or format' with lines,\
+     '/var/log/ntp/sys' using 2:9 title 'Access denied' with lines,\
+     '/var/log/ntp/sys' using 2:10 title 'Bad length or format' with lines,\
      '/var/log/ntp/sys' using 2:11 title 'Bad authentication' with lines,\
-     '/var/log/ntp/sys' using 2:11 title 'Rate exceeded' with lines
+     '/var/log/ntp/sys' using 2:12 title 'Rate exceeded' with lines
