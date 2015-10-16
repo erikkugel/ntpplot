@@ -19,7 +19,7 @@ preidically.
 - An Apache configuration file allows service the plots folder over HTTP.
 
 ### Requirements:
-- [NTP version 4.2.8 or higher](http://www.ntp.org/) (untested with lower NTP 4.x versions, unlikely to work with 3.x and lower)
+- [NTP version 4.2.8 or higher](http://www.ntp.org/) (untested with lower NTP 4.x versions, unlikely to work with 3.x and lower due to [log format changes](http://www.ntp.org/ntpfaq/NTP-s-trouble.htm#TAB-STATFIL))
 - [Gnuplot version 4.6 or higher](http://www.gnuplot.info/) (untested with lower Gnuplot versions)
 - [Apache version 2.4](https://httpd.apache.org/docs/2.4/) (optional - needed so serve plots over HTTP, will not work with Apache 2.2 as is)
 
