@@ -16,7 +16,7 @@ The concept is simple and strives to levrage existing components:
 `includefile` in `ntp.conf`.
 - A [Gnuplot](http://www.gnuplot.info/) script that generates the plots is configured with cron to run
 preidically.
-- An Apache configuration file allows service the plots folder over HTTP.
+- An Apache configuration file allows serving the plots folder and images over HTTP.
 
 ### Requirements:
 - [NTP version 4.2.8 or higher](http://www.ntp.org/) (untested with lower NTP 4.x versions, unlikely to work with 3.x and lower due to [log format changes](http://www.ntp.org/ntpfaq/NTP-s-trouble.htm#TAB-STATFIL))
