@@ -3,7 +3,7 @@
 
 ### About
 ntpplot levrages the robust statistics repoting built into NTP to plot various
-graphhs regarding normal and abnormal operation.
+graphs regarding normal and abnormal operation.
 
 ### Who is this for?
 Anyone running a production NTP server (whether in an internal environment such
