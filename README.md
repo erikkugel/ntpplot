@@ -24,27 +24,7 @@ preidically.
 - [Apache version 2.4](https://httpd.apache.org/docs/2.4/) (optional - needed so serve plots over HTTP, will not work with Apache 2.2 as is)
 
 ### Installation:
-- Clone repo under `/opt`:
-```
-git clone https://github.com/erikkugel/ntpplot.git /opt/ntpplot
-```
-- Create a folder called `/var/log/ntp` owned by whichever user runs `ntp`:
-```
-mkdir -p -v /var/log/ntp
-```
-- Include NTP's statistics configuration in `/etc/ntp.conf`:
-```
-echo "includefile /opt/ntpplot/conf/ntp-stats.conf" >> /etc/ntp.conf
-```
-- Symlink cron job configuration under `/etc/cron.d`:
-```
-ln -v -s -f /opt/ntpplot/conf/cron-ntpplot /etc/cron.d/ntpplot
-```
-- Include Apache config in Apache 2.4:
-```
-echo "Include /opt/ntpplot/conf/httpd-ntpplot.conf" >> /etc/httpd/httpd.conf
-```
-- Reload NTP and Apache configuration.
+See the Wiki [here](https://github.com/erikkugel/ntpplot/wiki/Installation)
 
 ### Screenshots:
 ![NTP Peer Versions](screenshots/sys_ntp_versions.png "NTP Peer Versions")
