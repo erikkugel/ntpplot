@@ -5,9 +5,9 @@
 set terminal pngcairo size 1024,768 enhanced background rgb 'black'
 set title textcolor rgbcolor 'white'
 set key textcolor rgbcolor 'white'
-set border linecolor rgbcolor 'yellow'
-set xlabel textcolor rgbcolor 'green'
-set ylabel textcolor rgbcolor 'green'
+set border linecolor rgbcolor 'white'
+set xlabel textcolor rgbcolor 'white'
+set ylabel textcolor rgbcolor 'white'
 
 
 set output '/opt/ntpplot/plots/sys_ntp_versions.png'
