@@ -1,4 +1,6 @@
 #!/usr/bin/gnuplot
+#
+# Plot NTP statistics
 
 set terminal pngcairo size 1024,768 enhanced background rgb 'black'
 set title textcolor rgbcolor 'white'
