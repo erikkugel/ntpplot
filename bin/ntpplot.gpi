@@ -1,27 +1,29 @@
 #!/usr/bin/gnuplot
+#
+# Plot NTP statistics
 
 set terminal pngcairo size 1024,768 enhanced background rgb 'black'
 set title textcolor rgbcolor 'white'
 set key textcolor rgbcolor 'white'
-set border linecolor rgbcolor 'yellow'
-set xlabel textcolor rgbcolor 'green'
-set ylabel textcolor rgbcolor 'green'
+set border linecolor rgbcolor 'white'
+set xlabel textcolor rgbcolor 'white'
+set ylabel textcolor rgbcolor 'white'
 
 
 set output '/opt/ntpplot/plots/sys_ntp_versions.png'
 set title 'NTP Peers Version'
 set xlabel 'Seconds (past UTC midnight)'
 set ylabel 'NTP Version'
-plot '/var/log/ntp/sys' using 2:6 title 'Current NTP Version' with lines,\
-     '/var/log/ntp/sys' using 2:7 title 'Previous NTP Version' with lines,\
-     '/var/log/ntp/sys' using 2:8 title 'Neither NTP version' with lines
+plot '/var/log/ntp/sys' using 2:6 title 'Current NTP Version' with lines lt rgb "green",\
+     '/var/log/ntp/sys' using 2:7 title 'Previous NTP Version' with lines lt rgb "yellow",\
+     '/var/log/ntp/sys' using 2:8 title 'Neither NTP version' with lines lt rgb "red"
 
 set output '/opt/ntpplot/plots/sys_packet_errors.png'
-set title 'NTP Packet Errors' textcolor rgbcolor 'red'
+set title 'NTP Packet Errors'
 set xlabel 'Seconds (past UTC midnight)'
-set ylabel 'Errors' textcolor rgbcolor 'red'
-plot '/var/log/ntp/sys' using 2:8 title 'Bad version' with lines,\
-     '/var/log/ntp/sys' using 2:9 title 'Access denied' with lines,\
-     '/var/log/ntp/sys' using 2:10 title 'Bad length or format' with lines,\
-     '/var/log/ntp/sys' using 2:11 title 'Bad authentication' with lines,\
-     '/var/log/ntp/sys' using 2:12 title 'Rate exceeded' with lines
+set ylabel 'Errors'
+plot '/var/log/ntp/sys' using 2:8 title 'Bad version' with lines lt rgb "green",\
+     '/var/log/ntp/sys' using 2:9 title 'Access denied' with lines lt rgb "red",\
+     '/var/log/ntp/sys' using 2:10 title 'Bad length or format' with lines lt rgb "yellow",\
+     '/var/log/ntp/sys' using 2:11 title 'Bad authentication' with lines lt rgb "purple",\
+     '/var/log/ntp/sys' using 2:12 title 'Rate exceeded' with lines lt rgb "white"
